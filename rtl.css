@@ -1,0 +1,21 @@
+[data-rastno-direction="rtl"] {
+  direction: rtl !important;
+  text-align: right !important;
+}
+[data-rastno-direction="ltr"] {
+  direction: ltr !important;
+  text-align: left !important;
+}
+[data-rastno-size="large"]:not([data-rastno-size] *) { font-size: 110% !important; }
+[data-rastno-size="larger"]:not([data-rastno-size] *) { font-size: 120% !important; }
+[data-rastno-spacing="relaxed"] { line-height: 1.75 !important; }
+[data-rastno-spacing="wide"] { line-height: 2 !important; }
+:is(ol, ul)[data-rastno-direction="rtl"] {
+  padding-inline-start: 1.6em !important;
+  padding-inline-end: 0 !important;
+}
+[data-rastno-direction="rtl"] :is(pre, code, kbd, samp, [role="code"]) {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+[data-rastno-direction="rtl"] pre { text-align: left !important; }

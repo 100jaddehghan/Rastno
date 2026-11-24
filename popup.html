@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>راست‌نو</title>
+  <link rel="stylesheet" href="popup.css">
+  <script defer src="site-registration.js"></script>
+  <script defer src="popup.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="mark" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div><h1>راست‌نو</h1><p>راست‌چین فارسی در وب</p></div>
+    </header>
+    <section class="control" aria-labelledby="site-label">
+      <p class="label" id="site-label">وب‌سایت فعلی</p>
+      <bdi id="host" dir="ltr">—</bdi>
+      <div class="setting">
+        <div>
+          <p id="switch-label">راست‌چین خودکار</p>
+          <p id="state" aria-live="polite">در حال بررسی…</p>
+        </div>
+        <button id="toggle" type="button" role="switch" aria-checked="false" aria-labelledby="switch-label" disabled><span></span></button>
+      </div>
+      <div class="setting scope">
+        <label for="scope">اعمال روی</label>
+        <select id="scope" disabled>
+          <option value="both">متن و تایپ</option>
+          <option value="reading">فقط متن صفحه</option>
+          <option value="typing">فقط کادر تایپ</option>
+        </select>
+      </div>
+      <details class="reading">
+        <summary>خوانایی متن فارسی</summary>
+        <div class="setting scope">
+          <label for="size">اندازهٔ متن</label>
+          <select id="size" disabled>
+            <option value="default">پیش‌فرض سایت</option>
+            <option value="large">کمی بزرگ‌تر</option>
+            <option value="larger">بزرگ‌تر</option>
+          </select>
+        </div>
+        <div class="setting scope">
+          <label for="spacing">فاصلهٔ خطوط</label>
+          <select id="spacing" disabled>
+            <option value="default">پیش‌فرض سایت</option>
+            <option value="relaxed">باز</option>
+            <option value="wide">بازتر</option>
+          </select>
+        </div>
+      </details>
+    </section>
+    <details class="sites" id="sites">
+      <summary>سایت‌های فعال <span id="site-count"></span></summary>
+      <p id="sites-empty" hidden>هنوز سایتی فعال نشده است.</p>
+      <ul id="site-list"></ul>
+    </details>
+    <div class="shortcut" id="shortcut" hidden>
+      <span>تغییر جهت کادر فعال</span>
+      <kbd dir="ltr" id="shortcut-key"></kbd>
+    </div>
+    <div class="shortcut" id="zwnj" hidden>
+      <span>درج نیم‌فاصله</span>
+      <kbd dir="ltr" id="zwnj-key"></kbd>
+    </div>
+    <p class="tools-hint">ابزارهای متن در منوی راست‌کلیکِ متن انتخاب‌شده</p>
+    <p id="notice" role="status" hidden></p>
+  </main>
+</body>
+</html>

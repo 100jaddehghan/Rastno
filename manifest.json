@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "راست‌نو | Rastno",
+  "version": "0.5.4",
+  "homepage_url": "https://github.com/100jaddehghan",
+  "description": "جهت درست برای متن و تایپ فارسی در وب",
+  "minimum_chrome_version": "119",
+  "web_accessible_resources": [
+    { "resources": ["rtl.css"], "matches": ["http://*/*", "https://*/*"] }
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "contextMenus",
+    "clipboardWrite"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "commands": {
+    "insert-zwnj": {
+      "suggested_key": { "default": "Alt+Shift+Z", "mac": "MacCtrl+Shift+Z" },
+      "description": "درج نیم‌فاصله"
+    },
+    "cycle-editor-direction": {
+      "suggested_key": { "default": "Alt+Shift+Y", "mac": "MacCtrl+Shift+Y" },
+      "description": "تغییر جهت کادر تایپ فعال"
+    }
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png"
+    },
+    "default_title": "راست‌نو",
+    "default_popup": "popup.html"
+  }
+}
